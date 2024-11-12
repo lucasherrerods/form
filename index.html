@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="left-container">
+            <img src="assets/images/mobile-profile.svg" alt="Profile Banner">
+        </div>
+        <div id="right-container">
+            <div id="image-form">
+                <img src="assets/images/male.svg" alt="Avatar masculino">
+            </div>
+            <form id="form">
+                <div class="form-content">
+                    <label for="username">Nome de usuário</label>
+                    <div class="input-content">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="username" id="username" class="input-form" placeholder="Insira um nome de usuário" oninput="validateUsername()">
+                        <span class="error-form">Nome de usuário precisa ter no mínimo 6 caracteres.</span>
+                    </div>
+                </div>
+                <div class="form-content">
+                    <label for="email">E-mail</label>
+                    <div class="input-content">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" id="email" class="input-form" placeholder="Insira seu e-mail" oninput="emailValidate()">
+                        <span class="error-form">Informe um e-mail válido.</span>
+                    </div>
+                </div>
+                <div class="form-content">
+                    <label for="password">Senha</label>
+                    <div class="input-content">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" name="password" id="password" class="input-form" placeholder="Digite uma senha" oninput="passwordValidate()">
+                        <span class="error-form">A senha precisa ter no mínimo 8 caracteres.</span>
+                    </div>
+                </div>
+                <div class="form-content">
+                    <label for="password">Confirmação de senha</label>
+                    <div class="input-content">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password-confirm" id="password-confirm" class="input-form" placeholder="Digite a senha novamente" oninput="passwordConfirmValidate()">
+                        <span class="error-form">As senhas devem ser iguais.</span>
+                    </div>
+                </div>
+                <input type="submit" value="Cadastrar" id="btn">
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
